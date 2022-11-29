@@ -1,4 +1,5 @@
 import 'package:betviewapp/colors.dart';
+import 'package:betviewapp/screens/stat_viewer_screen.dart';
 import 'package:betviewapp/strings.dart';
 import 'package:betviewapp/widgets/input_field.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       _formKey.currentState?.save();
 
                       if (nonce == dotenv.env['NONCE']) {
-                        print('correct!');
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const StatViewer()));
                       }
                     },
                     child: const Text(
