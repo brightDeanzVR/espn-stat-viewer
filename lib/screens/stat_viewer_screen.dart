@@ -196,7 +196,7 @@ class _StatViewerState extends State<StatViewer> {
           ),
         ),
         SizedBox(
-          height: 300,
+          height: 400,
           width: 40,
           child: ListView(
             children: stats
